@@ -19,6 +19,7 @@ namespace BindingsTests
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
     }
 }
