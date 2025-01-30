@@ -12,8 +12,25 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <Button Command="{Binding ClickCmd}" VerticalAlignment="Top" Margin="20, 0" Height="30"> Click </Button>
-            <TextBlock Text="{Binding Text1}" VerticalAlignment="Top"/>
+            <Button Command="{Binding ClickCmd}" VerticalAlignment="Top" Margin="20, 0" Height="30">Change</Button>
+            <StackPanel Orientation="Vertical"  VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Text from Text1: "/>
+                    <TextBlock Text="{Binding Text1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Text from Person.Name: "/>
+                    <TextBlock Text="{Binding Person.Name}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Text from Person.Address.Street: "/>
+                    <TextBlock Text="{Binding Person.Address.Street}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Text from Person.Address.Street2: "/>
+                    <TextBlock Text="{Binding Person.Address.Street2}"/>
+                </StackPanel>
+            </StackPanel>
 
         </StackPanel>
 

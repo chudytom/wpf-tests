@@ -22,15 +22,29 @@ namespace BindingsTests
         }
         private bool IsTrue { get; set; }
 
+        private Person _person = new Person("Sample person");
+
+        public Person Person
+        {
+            get { return _person; }
+            set { _person = value; }
+        }
+
+
         public MainWindowViewModel()
         {
             ClickCmd = new RelayCommand(OnClickCmd);
         }
 
+
+
         private void OnClickCmd()
         {
             IsTrue = !IsTrue;
             Text1 = IsTrue.ToString();
+            Person.Name = IsTrue.ToString();
+            Person.Address.Street = IsTrue.ToString();
+            Person.Address.Street2 = IsTrue.ToString();
         }
 
         public RelayCommand ClickCmd { get; private set; }
